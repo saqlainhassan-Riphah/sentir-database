@@ -4,8 +4,136 @@
     <meta charset="UTF-8">
     <title>SentiR Database</title>
 
-    <!-- THIS LINE WAS MISSING (VERY IMPORTANT) -->
-    <link rel="stylesheet" href="./style.css">
+    <style>
+        /* RESET */
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #fff3e0;
+            color: #222;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #ff6f00, #ff9800);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            animation: slideDown 1s ease;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        header p {
+            margin-top: 12px;
+            font-size: 16px;
+        }
+
+        /* NAVBAR */
+        nav {
+            background: #ffcc80;
+            padding: 14px;
+            text-align: center;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+        }
+
+        nav a {
+            margin: 0 16px;
+            text-decoration: none;
+            font-weight: 600;
+            color: #4e2600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* CARDS */
+        .card {
+            background: white;
+            padding: 32px;
+            margin-bottom: 40px;
+            border-radius: 18px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+            animation: popUp 0.8s ease;
+        }
+
+        @keyframes popUp {
+            from { transform: scale(0.95); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: #e65100;
+        }
+
+        /* CONTRIBUTORS */
+        .contributors {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contributor {
+            background: #fff8f0;
+            padding: 26px;
+            border-radius: 18px;
+            width: 260px;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contributor:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+        }
+
+        .contributor h3 {
+            margin-bottom: 6px;
+            color: #bf360c;
+        }
+
+        .contributor p {
+            margin: 6px 0;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #ffcc80;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+            color: #4e2600;
+            margin-top: 80px;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,11 +144,11 @@
 </header>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="datasets.html">Datasets</a>
-    <a href="license.html">License</a>
-    <a href="contact.html">Contact</a>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Datasets</a>
+    <a href="#">License</a>
+    <a href="#">Contact</a>
 </nav>
 
 <div class="container">
@@ -28,55 +156,47 @@
     <section class="card">
         <h2>Dashboard</h2>
         <p>
-            SentiR Database provides free and open-access datasets for
-            sentiment analysis, corpus linguistics, and discourse studies.
+            <strong>SentiR Database</strong> is a publicly available academic
+            repository designed to support research in sentiment analysis,
+            corpus linguistics, and computational discourse studies.
         </p>
     </section>
 
     <section class="card">
         <h2>Repository Overview</h2>
         <ul>
-            <li>Public datasets available</li>
-            <li>Free downloads (no login)</li>
-            <li>Academic research focus</li>
+            <li>Open-access datasets</li>
+            <li>Free downloads for research and teaching</li>
+            <li>Designed for corpus & sentiment analysis</li>
+            <li>Maintained as an academic resource</li>
         </ul>
     </section>
 
     <section class="card">
         <h2>Contributors</h2>
 
-        <section class="card">
-    <h2>Contributors</h2>
+        <div class="contributors">
 
-    <div class="contributors">
+            <div class="contributor">
+                <h3>Dr. Saqlain Hassan</h3>
+                <p><strong>Founder and Lead Researcher</strong></p>
+                <p>
+                    Assistant Professor of Corpus and Computational Linguistics<br>
+                    Riphah International University,<br>
+                    Islamabad, Pakistan
+                </p>
+            </div>
 
-        <div class="contributor">
-            <h3>Dr. Saqlain Hassan</h3>
-            <p><strong>Founder & Lead Researcher</strong></p>
-            <p>
-                Assistant Professor (Corpus Linguistics)<br>
-                Riphah International University
-            </p>
-            <p>
-                📧 saqlain.hassan@riphah.edu.pk<br>
-                📧 dr.saqlainhassan@gmail.com
-            </p>
+            <div class="contributor">
+                <h3>Riffat Nazeer</h3>
+                <p><strong>Research Assistant</strong></p>
+                <p>
+                    Specialist in Corpus and Computational Tools
+                </p>
+            </div>
+
         </div>
-
-        <div class="contributor">
-            <h3>Riffat Nazeer</h3>
-            <p><strong>Research Contributor</strong></p>
-            <p>
-                Research Assistant<br>
-                SentiR Database
-            </p>
-            <p>
-                📧 riffatnazeerahmad@gmail.com
-            </p>
-        </div>
-
-    </div>
-</section>
+    </section>
 
 </div>
 
