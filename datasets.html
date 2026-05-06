@@ -8,81 +8,93 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #f4f6f9;
+            background: #f5f5f5;
         }
 
         header {
-            background: #1f3a5f;
+            background: #ff8c00;
             color: white;
             text-align: center;
             padding: 20px;
         }
 
+        header h1 {
+            margin: 0;
+        }
+
         nav {
-            background: #333;
+            background: #ffcc80;
             text-align: center;
             padding: 10px;
         }
 
         nav a {
-            color: white;
-            text-decoration: none;
             margin: 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
         }
 
         .container {
-            padding: 20px;
+            padding: 30px;
         }
 
-        .card {
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        ul {
             background: white;
             padding: 20px;
-            margin-bottom: 20px;
             border-radius: 8px;
             box-shadow: 0 0 8px rgba(0,0,0,0.1);
         }
 
-        .btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background: #1f3a5f;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
+        li {
+            padding: 8px 0;
         }
 
-        .btn:hover {
-            background: #16304a;
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #ffcc80;
+            margin-top: 30px;
         }
     </style>
+
 </head>
 
 <body>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Datasets</title>
-</head>
 
-<body style="font-family: Arial; text-align:center; padding:50px;">
+<header>
+    <h1>SentiR Database</h1>
+    <p>Open Research Repository for Sentiment & Discourse Analysis</p>
+</header>
 
-    <h1>SentiR Dataset Portal</h1>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="datasets.html">Datasets</a>
+    <a href="about.html">About</a>
+    <a href="license.html">License</a>
+    <a href="contact.html">Contact</a>
+</nav>
 
-    <p>Click below to access dataset collection</p>
+<div class="container">
 
-    <a href="https://drive.google.com/drive/folders/10BAYS40cvt1Mtr0ct3PJsQWyzs6paw-S?usp=sharing"
-       target="_blank"
-       style="display:inline-block;
-              padding:15px 20px;
-              background:#1f3a5f;
-              color:white;
-              text-decoration:none;
-              border-radius:8px;">
-        🔗 Open Dataset Folder
-    </a>
+    <h2>📊 Dataset List</h2>
 
-</body>
-</html>
+    <!-- CLEAN DATASET LIST -->
+    <ul>
+        <li>Tweet Corpus 1 - Sentiment Positive</li>
+        <li>News Dataset - Political Discourse</li>
+        <li>Social Media Corpus - Neutral/Negative Mix</li>
+    </ul>
+
+</div>
+
+<footer>
+    © 2026 SentiR Database
+</footer>
+
 </body>
 </html>
