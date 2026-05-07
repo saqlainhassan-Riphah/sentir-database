@@ -1,41 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>About – SentiR Database</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>About - SentiR Database</title>
+
+<style>
+body{
+margin:0;
+font-family:Segoe UI,Arial,sans-serif;
+background:#fff3e0;
+color:#222;
+animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+header{
+background:linear-gradient(135deg,#ff6f00,#ff9800);
+color:white;
+padding:50px 20px;
+text-align:center;
+}
+
+nav{
+background:#ffcc80;
+padding:14px;
+text-align:center;
+}
+
+nav a{
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+color:#4e2600;
+}
+
+.container{
+max-width:1000px;
+margin:50px auto;
+padding:20px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:16px;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+animation:slideUp 1s ease;
+}
+
+@keyframes slideUp{
+from{
+transform:translateY(30px);
+opacity:0;
+}
+to{
+transform:translateY(0);
+opacity:1;
+}
+}
+
+footer{
+margin-top:60px;
+background:#ffcc80;
+padding:20px;
+text-align:center;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>SentiR Database</h1>
-    <p>About the Project</p>
+<h1>About SentiR Database</h1>
+<p>Open Academic Resource for Sentiment & Discourse Analysis</p>
 </header>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="datasets.html">Datasets</a>
-    <a href="license.html">License</a>
-    <a href="contact.html">Contact</a>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="datasets.html">Datasets</a>
+<a href="license.html">License</a>
+<a href="contact.html">Contact</a>
 </nav>
 
 <div class="container">
 
-<h2>About SentiR Database</h2>
+<div class="card">
+<h2>About the Project</h2>
+
 <p>
-SentiR Database is an open academic initiative aimed at providing
-high-quality sentiment and discourse datasets in CSV format.
+SentiR Database is an open-access academic repository developed to support
+research in sentiment analysis, corpus linguistics, computational linguistics,
+and discourse studies.
 </p>
 
 <p>
-The database is designed for researchers in linguistics, NLP,
-media studies, and social sciences.
+The platform provides freely accessible datasets and research resources
+for students, researchers, and educators around the world.
+</p>
+
+<p>
+The repository particularly focuses on social media discourse,
+public opinion analysis, and computational approaches to language research.
 </p>
 
 </div>
 
+</div>
+
 <footer>
-<p>© 2026 SentiR Database</p>
+© 2026 SentiR Database
 </footer>
 
 </body>
