@@ -1,99 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>SentiR Database – Datasets</title>
+<meta charset="UTF-8">
+<title>Datasets - SentiR Database</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-        }
+<style>
 
-        header {
-            background: #ff8c00;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
+/* BODY */
+body{
+    margin:0;
+    font-family:Segoe UI, Arial, sans-serif;
+    background:#fff3e0;
+    color:#222;
+    animation:fadeIn 1s ease;
+}
 
-        header h1 {
-            margin: 0;
-        }
+/* FADE ANIMATION */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
 
-        nav {
-            background: #ffcc80;
-            text-align: center;
-            padding: 10px;
-        }
+    to{
+        opacity:1;
+    }
+}
 
-        nav a {
-            margin: 10px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
+/* HEADER */
+header{
+    background:linear-gradient(135deg,#ff6f00,#ff9800);
+    color:white;
+    padding:60px 20px;
+    text-align:center;
+    animation:slideDown 1s ease;
+}
 
-        .container {
-            padding: 30px;
-        }
+/* HEADER ANIMATION */
+@keyframes slideDown{
+    from{
+        transform:translateY(-40px);
+        opacity:0;
+    }
 
-        h2 {
-            margin-bottom: 20px;
-        }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
 
-        ul {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 8px rgba(0,0,0,0.1);
-        }
+header h1{
+    margin:0;
+    font-size:40px;
+}
 
-        li {
-            padding: 8px 0;
-        }
+header p{
+    margin-top:10px;
+    font-size:16px;
+}
 
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #ffcc80;
-            margin-top: 30px;
-        }
-    </style>
+/* NAVIGATION */
+nav{
+    background:#ffcc80;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 3px 8px rgba(0,0,0,0.2);
+}
 
+nav a{
+    margin:0 16px;
+    text-decoration:none;
+    font-weight:bold;
+    color:#4e2600;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#bf360c;
+}
+
+/* MAIN CONTAINER */
+.container{
+    max-width:1100px;
+    margin:50px auto;
+    padding:20px;
+}
+
+/* DATASET CARDS */
+.dataset-card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    margin-bottom:35px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    transition:0.3s ease;
+    animation:popUp 1s ease;
+}
+
+.dataset-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 14px 35px rgba(0,0,0,0.25);
+}
+
+/* CARD ANIMATION */
+@keyframes popUp{
+    from{
+        transform:scale(0.95);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.dataset-card h2{
+    color:#e65100;
+    margin-top:0;
+}
+
+/* BUTTONS */
+.download-btn{
+    display:inline-block;
+    margin-top:18px;
+    padding:14px 22px;
+    background:#ff6f00;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    transition:0.3s ease;
+}
+
+.download-btn:hover{
+    background:#e65100;
+    transform:scale(1.05);
+}
+
+/* TAGS */
+.tag{
+    display:inline-block;
+    background:#ffe0b2;
+    color:#bf360c;
+    padding:6px 12px;
+    border-radius:20px;
+    margin-top:10px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+    background:#ffcc80;
+    text-align:center;
+    padding:25px;
+    color:#4e2600;
+    margin-top:60px;
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>SentiR Database</h1>
-    <p>Open Research Repository for Sentiment & Discourse Analysis</p>
+    <h1>SentiR Datasets</h1>
+    <p>Public Research Datasets for Sentiment & Discourse Analysis</p>
 </header>
 
 <nav>
     <a href="index.html">Home</a>
-    <a href="datasets.html">Datasets</a>
     <a href="about.html">About</a>
+    <a href="datasets.html">Datasets</a>
     <a href="license.html">License</a>
     <a href="contact.html">Contact</a>
 </nav>
 
 <div class="container">
 
-    <h2>📊 Dataset List</h2>
+    <!-- DATASET 1 -->
+    <div class="dataset-card">
 
-    <!-- CLEAN DATASET LIST -->
-    <ul>
-        <li>Tweet Corpus 1 - Sentiment Positive</li>
-        <li>News Dataset - Political Discourse</li>
-        <li>Social Media Corpus - Neutral/Negative Mix</li>
-    </ul>
+        <h2>Dataset 1</h2>
+
+        <p>
+            <strong>Title:</strong>
+            Generational Divide on Iran–US War
+        </p>
+
+        <p>
+            This dataset focuses on public discourse and sentiment
+            surrounding the Iran–US conflict and generational perspectives
+            expressed on social media platforms.
+        </p>
+
+        <span class="tag">Sentiment Analysis</span>
+        <span class="tag">Political Discourse</span>
+
+        <br>
+
+        <a class="download-btn"
+        href="https://drive.google.com/drive/folders/10BAYS40cvt1Mtr0ct3PJsQWyzs6paw-S?usp=sharing"
+        target="_blank">
+        Open Dataset Folder
+        </a>
+
+    </div>
+
+    <!-- DATASET 2 -->
+    <div class="dataset-card">
+
+        <h2>Dataset 2</h2>
+
+        <p>
+            <strong>Title:</strong>
+            Public Opinion on Strait of Hormuz Closure
+        </p>
+
+        <p>
+            A discourse-oriented dataset examining public reactions,
+            geopolitical narratives, and sentiment trends related to
+            the Strait of Hormuz closure debate.
+        </p>
+
+        <span class="tag">Corpus Linguistics</span>
+        <span class="tag">Geopolitics</span>
+
+        <br>
+
+        <a class="download-btn"
+        href="https://drive.google.com/drive/folders/10BAYS40cvt1Mtr0ct3PJsQWyzs6paw-S?usp=sharing"
+        target="_blank">
+        Open Dataset Folder
+        </a>
+
+    </div>
 
 </div>
 
 <footer>
-    © 2026 SentiR Database
+    © 2026 SentiR Database | Open Academic Repository
 </footer>
 
 </body>
